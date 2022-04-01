@@ -1,4 +1,4 @@
-package co.com.juanmaya.sofka.frameworkreto.page.login;
+package co.com.juanmaya.sofka.frameworkreto.page.crearnuevacuenta;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,9 @@
 package co.com.juanmaya.sofka.frameworkreto.helpers;
 
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Dictionary {
     public static final String STATE_BY_DEFAULT_FLORIDA = "Florida";
 
@@ -17,9 +20,12 @@ public class Dictionary {
     public static final String PROPERTIES_FILE_BASE_PATH = "src/main/resources/properties/";
     public static final String CONFIGURATION_PROPERTIES_FILE = USER_DIRECTORY + "/" +PROPERTIES_FILE_BASE_PATH + "configuration.properties";
     public static final String MAIL_PROPERTIES_FILE = USER_DIRECTORY + PROPERTIES_FILE_BASE_PATH + "mail.properties";
+    public static final String UPLOAD_FILE_BASE_PATH = USER_DIRECTORY + "/"+"Reference.txt";
     public static final int STANDARD_TIMEOUT_TWO= 2;
     public static final int STANDARD_TIMEOUT_FIVE= 5;
     public static final int STANDARD_TIMEOUT_TEN= 10;
     public static final Boolean STANDARD_EVIDENCE_SCREENSHOT = true;
     public static final String CONTACT_SUCCESSFULL_MESSAGE = "Your message has been successfully sent to our team.";
+    public static final Path STANDARD_UPLOAD_FILE_LOCATION = Paths.get(UPLOAD_FILE_BASE_PATH);
+
 }

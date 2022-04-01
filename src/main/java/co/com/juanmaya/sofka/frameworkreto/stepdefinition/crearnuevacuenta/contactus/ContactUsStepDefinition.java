@@ -1,12 +1,11 @@
 package co.com.juanmaya.sofka.frameworkreto.stepdefinition.crearnuevacuenta.contactus;
 
+import co.com.juanmaya.sofka.frameworkreto.controllers.contactus.ContactUsAllFieldsController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.contactus.ContactUsBasicController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.contactus.ContactUsSuccessfullController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.contactus.LandingPageContactUsController;
 import co.com.juanmaya.sofka.frameworkreto.data.objects.TestInfo;
-import co.com.juanmaya.sofka.frameworkreto.helpers.Dictionary;
 import co.com.juanmaya.sofka.frameworkreto.model.Customer;
-import co.com.juanmaya.sofka.frameworkreto.page.login.LandingPage;
 import co.com.juanmaya.sofka.frameworkreto.stepdefinition.crearnuevacuenta.Setup;
 import co.com.sofka.test.actions.WebAction;
 import co.com.sofka.test.evidence.reports.Assert;
@@ -73,10 +72,35 @@ public class ContactUsStepDefinition extends Setup {
     public void elClienteRecibeUnMensajeDeConfirmacionDeQueSuMensajeSeHaEnviadoConExito() {
         String message;
         ContactUsSuccessfullController contactUsSuccessfullController =
-                new ContactUsSuccessfullController(webAction, testInfo.getFeatureName(), browser());
+                new ContactUsSuccessfullController(webAction);
         message = contactUsSuccessfullController.checkMessage();
         Assert.Hard
                 .thatString(CONTACT_SUCCESSFULL_MESSAGE)
                 .isEqualTo(message);
     }
+
+
+    @Cuando("el cliente navega hacia la pagina de contacto y escribe su email, selecciona un destinatario,escribe un mensaje y carga un archivo")
+    public void elClienteNavegaHaciaLaPaginaDeContactoYEscribeSuEmailSeleccionaUnDestinatarioEscribeUnMensajeYCargaUnArchivo() {
+        ContactUsAllFieldsController contactUsAllFieldsController =
+                new ContactUsAllFieldsController(
+                        webAction,
+                        customer.getEmail(),
+                        customer.getMessage(),
+                        customer.getReference()
+                );
+        contactUsAllFieldsController.crearUnMensajeParaSoporteConTodosLosCampos();
+    }
+    @Entonces("el cliente recibe un mensaje de confirmacion indicando que se ha enviado el mensaje exitosamente")
+    public void elClienteRecibeUnMensajeDeConfirmacionIndicandoQueSeHaEnviadoElMensajeExitosamente() {
+        String message;
+        ContactUsSuccessfullController contactUsSuccessfullController =
+                new ContactUsSuccessfullController(webAction);
+        message = contactUsSuccessfullController.checkMessage();
+        Assert.Hard
+                .thatString(CONTACT_SUCCESSFULL_MESSAGE)
+                .isEqualTo(message);
+    }
+
+
 }

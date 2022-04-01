@@ -1,6 +1,6 @@
-package co.com.juanmaya.sofka.frameworkreto.controllers.loginuser;
+package co.com.juanmaya.sofka.frameworkreto.controllers.crearnuevacuenta;
 
-import co.com.juanmaya.sofka.frameworkreto.page.login.MyAccountPage;
+import co.com.juanmaya.sofka.frameworkreto.page.crearnuevacuenta.MyAccountPage;
 import co.com.sofka.test.actions.WebAction;
 import co.com.sofka.test.evidence.reports.Report;
 import co.com.sofka.test.exceptions.WebActionsException;

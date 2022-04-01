@@ -1,8 +1,7 @@
 package co.com.juanmaya.sofka.frameworkreto.controllers.contactus;
 
-import co.com.juanmaya.sofka.frameworkreto.helpers.Dictionary;
 import co.com.juanmaya.sofka.frameworkreto.helpers.Helper;
-import co.com.juanmaya.sofka.frameworkreto.page.login.LandingPage;
+import co.com.juanmaya.sofka.frameworkreto.page.crearnuevacuenta.LandingPage;
 import co.com.sofka.test.actions.WebAction;
 import co.com.sofka.test.automationtools.selenium.Browser;
 import co.com.sofka.test.evidence.reports.Report;

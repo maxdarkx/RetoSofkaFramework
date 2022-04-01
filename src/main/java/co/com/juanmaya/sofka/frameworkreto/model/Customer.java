@@ -21,6 +21,15 @@ public class Customer {
     private String mobilePhone;
     private String state;
     private String message;
+    private String reference;
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
 
     public String getMessage() {
         return message;
@@ -164,5 +173,8 @@ public class Customer {
         );
         setState(STATE_BY_DEFAULT_FLORIDA);
         setMessage("Mensaje de prueba, no contestar!");
+
+        //Referencia R de la tienda T
+        setReference("R"+faker.numerify("######")+"T"+faker.numerify("###"));
     }
 }

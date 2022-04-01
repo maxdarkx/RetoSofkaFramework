@@ -11,8 +11,6 @@ import static co.com.juanmaya.sofka.frameworkreto.helpers.Dictionary.STANDARD_TI
 
 public class ContactUsSuccessfullController {
     private WebAction webAction;
-    private String feature;
-    private Browser browser;
 
     public WebAction getWebAction() {
         return webAction;
@@ -22,26 +20,9 @@ public class ContactUsSuccessfullController {
         this.webAction = webAction;
     }
 
-    public String getFeature() {
-        return feature;
-    }
-
-    public void setFeature(String feature) {
-        this.feature = feature;
-    }
-
-    public Browser getBrowser() {
-        return browser;
-    }
-
-    public void setBrowser(Browser browser) {
-        this.browser = browser;
-    }
-
-    public ContactUsSuccessfullController(WebAction webAction, String feature, Browser browser) {
+    public ContactUsSuccessfullController(WebAction webAction) {
         this.webAction = webAction;
-        this.feature = feature;
-        this.browser = browser;
+
     }
 
     public String checkMessage()

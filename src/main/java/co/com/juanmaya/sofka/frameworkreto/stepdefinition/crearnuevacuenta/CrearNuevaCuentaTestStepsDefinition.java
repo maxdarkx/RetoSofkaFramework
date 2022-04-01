@@ -1,8 +1,8 @@
 package co.com.juanmaya.sofka.frameworkreto.stepdefinition.crearnuevacuenta;
 
-import co.com.juanmaya.sofka.frameworkreto.controllers.loginuser.CreateAnAccountWebController;
-import co.com.juanmaya.sofka.frameworkreto.controllers.loginuser.LoginPageController;
-import co.com.juanmaya.sofka.frameworkreto.controllers.loginuser.MyAccountWebController;
+import co.com.juanmaya.sofka.frameworkreto.controllers.crearnuevacuenta.CreateAnAccountWebController;
+import co.com.juanmaya.sofka.frameworkreto.controllers.crearnuevacuenta.LoginPageController;
+import co.com.juanmaya.sofka.frameworkreto.controllers.crearnuevacuenta.MyAccountWebController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.openwebpage.StartBrowserWebController;
 import co.com.juanmaya.sofka.frameworkreto.data.objects.TestInfo;
 import co.com.juanmaya.sofka.frameworkreto.model.Customer;

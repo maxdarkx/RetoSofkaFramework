@@ -1,6 +1,6 @@
-package co.com.juanmaya.sofka.frameworkreto.controllers.loginuser;
+package co.com.juanmaya.sofka.frameworkreto.controllers.crearnuevacuenta;
 
-import co.com.juanmaya.sofka.frameworkreto.page.login.LandingPage;
+import co.com.juanmaya.sofka.frameworkreto.page.crearnuevacuenta.LandingPage;
 import co.com.sofka.test.actions.WebAction;
 import co.com.sofka.test.evidence.reports.Report;
 import co.com.sofka.test.exceptions.WebActionsException;
