@@ -14,24 +14,12 @@ public class AddToCartPageController {
     public void setWebAction(WebAction webAction) {
         this.webAction = webAction;
     }
-    private Browser browser;
-    private String feature;
     private WebAction webAction;
-
-    public void setBrowser(Browser browser) {
-        this.browser = browser;
-    }
-
-    public void setFeature(String feature) {
-        this.feature = feature;
-    }
 
     public AddToCartPageController() {
     }
 
-    public AddToCartPageController(Browser browser, String feature, WebAction webAction) {
-        this.browser = browser;
-        this.feature = feature;
+    public AddToCartPageController(WebAction webAction) {
         this.webAction = webAction;
     }
 
@@ -39,7 +27,6 @@ public class AddToCartPageController {
     {
         try
         {
-            //webAction.startWebApp(browser, Helper.getProperty(APP_URL_PROPERTY), feature);
             AddToCartPage addToCartPage = new AddToCartPage(webAction.getDriver());
 
             webAction.click(addToCartPage.getWomenCategory(),STANDARD_TIMEOUT_FIVE,STANDARD_EVIDENCE_SCREENSHOT);

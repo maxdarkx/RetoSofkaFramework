@@ -1,5 +1,6 @@
 package co.com.juanmaya.sofka.frameworkreto.stepdefinition.addtocart;
 
+import co.com.juanmaya.sofka.frameworkreto.controllers.addtocart.AddToCartFromAuxiliaryViewPageController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.addtocart.AddToCartPageController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.addtocart.OrderCompletePageController;
 import co.com.juanmaya.sofka.frameworkreto.controllers.addtocart.ProceedToCheckoutPageController;
@@ -49,9 +50,7 @@ public class AddToCartStepDefinition extends Setup {
                 .concat(testInfo.getScenarioName()));
     }
 
-
-
-
+    //Para el primer Escenario: Añadir al carrito desde la pagina principal
     @Dado("que el cliente se encuentra en la pagina de inicio y ha hecho login en su cuenta")
     public void queElClienteSeEncuentraEnLaPaginaDeInicioYHaHechoLoginEnSuCuenta() {
         StartBrowserWebController startBrowserWebController = new StartBrowserWebController(
@@ -73,12 +72,7 @@ public class AddToCartStepDefinition extends Setup {
 
     @Cuando("el cliente selecciona algunos articulos y estos se agregan al carrito de compras")
     public void elClienteSeleccionaAlgunosArticulosYEstosSeAgreganAlCarritoDeCompras() {
-        AddToCartPageController addToCartPageController =
-                new AddToCartPageController(
-                        browser(),
-                        testInfo.getFeatureName(),
-                        webAction
-                );
+        AddToCartPageController addToCartPageController = new AddToCartPageController(webAction);
         addToCartPageController.anadirAlCarrito();
     }
     @Cuando("el cliente hace checkout")
@@ -92,6 +86,15 @@ public class AddToCartStepDefinition extends Setup {
         OrderCompletePageController orderCompletePageController = new OrderCompletePageController(webAction);
         mensajeOrdenCompleta = orderCompletePageController.obtenerTextoOrdenCompleta();
         Assert.Hard.thatString(mensajeOrdenCompleta).isEqualTo(ORDER_COMPLETE);
+    }
+
+
+    //para el escenario: Añadir al carrito desde las vistas auxiliares
+    @Cuando("el cliente selecciona algunos articulos desde sus vistas detalladas y estos se agregan al carrito de compras")
+    public void el_cliente_selecciona_algunos_articulos_desde_sus_vistas_detalladas_y_estos_se_agregan_al_carrito_de_compras() {
+        AddToCartFromAuxiliaryViewPageController addToCartFromAuxiliaryViewPageController =
+                new AddToCartFromAuxiliaryViewPageController(webAction);
+        addToCartFromAuxiliaryViewPageController.anadirAlCarritoDesdeVistasAuxiliares();
     }
 
 }

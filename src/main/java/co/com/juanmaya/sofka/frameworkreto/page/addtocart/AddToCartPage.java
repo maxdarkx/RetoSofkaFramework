@@ -11,7 +11,6 @@ public class AddToCartPage {
     @FindBy(xpath = "//*[@id=\'block_top_menu\']/ul/li[1]/a")
     WebElement womenCategory;
 
-
     @CacheLookup
     @FindBy(xpath = "//*[@id=\'block_top_menu\']/ul/li[3]/a")
     WebElement tshirtCategory;
