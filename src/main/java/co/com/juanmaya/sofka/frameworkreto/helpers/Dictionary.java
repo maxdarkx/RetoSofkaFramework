@@ -27,5 +27,5 @@ public class Dictionary {
     public static final Boolean STANDARD_EVIDENCE_SCREENSHOT = true;
     public static final String CONTACT_SUCCESSFULL_MESSAGE = "Your message has been successfully sent to our team.";
     public static final Path STANDARD_UPLOAD_FILE_LOCATION = Paths.get(UPLOAD_FILE_BASE_PATH);
-
+    public static final String ORDER_COMPLETE = "Your order on My Store is complete.";
 }

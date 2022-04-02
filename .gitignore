@@ -1,6 +1,7 @@
 /.gradle/
 /build/
 /bin/
+*/evidence/
 
 #deshabilitado inicialmente por seguridad. Habilitar una vez reparado el hueco de seguridad
 build.gradle

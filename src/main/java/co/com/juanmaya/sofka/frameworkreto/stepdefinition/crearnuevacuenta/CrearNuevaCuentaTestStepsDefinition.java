@@ -67,8 +67,6 @@ public class CrearNuevaCuentaTestStepsDefinition extends Setup {
         CreateAnAccountWebController createAnAccountWebController = new CreateAnAccountWebController();
         createAnAccountWebController.setWebAction(webAction);
         createAnAccountWebController.crearUnaCuenta(customer);
-        customer = createAnAccountWebController.getCustomer();
-
     }
     @Entonces("como resultado el usuario quedara logueado dentro de su respectiva sesion per se.")
     public void comoResultadoElUsuarioQuedaraLogueadoDentroDeSuRespectivaSesionPerSe() {
