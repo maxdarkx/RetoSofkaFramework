@@ -18,7 +18,7 @@ public class Dictionary {
     public static final String APP_URL_PROPERTY = "app.url";
     public static final String USER_DIRECTORY = System.getProperty("user.dir");
     public static final String PROPERTIES_FILE_BASE_PATH = "src/main/resources/properties/";
-    public static final String CONFIGURATION_PROPERTIES_FILE = USER_DIRECTORY + "/" +PROPERTIES_FILE_BASE_PATH + "configuration.properties";
+    public static final String CONFIGURATION_PROPERTIES_FILE = PROPERTIES_FILE_BASE_PATH + "configuration.properties";
     public static final String MAIL_PROPERTIES_FILE = USER_DIRECTORY + PROPERTIES_FILE_BASE_PATH + "mail.properties";
     public static final String UPLOAD_FILE_BASE_PATH = USER_DIRECTORY + "/"+"Reference.txt";
     public static final int STANDARD_TIMEOUT_TWO= 2;
@@ -29,4 +29,5 @@ public class Dictionary {
     public static final String CONTACT_SUCCESSFULL_MESSAGE = "Your message has been successfully sent to our team.";
     public static final Path STANDARD_UPLOAD_FILE_LOCATION = Paths.get(UPLOAD_FILE_BASE_PATH);
     public static final String ORDER_COMPLETE = "Your order on My Store is complete.";
+    public static final String EVIDENCE_FILE_LOCATION = "src/main/resources/evidence";
 }
