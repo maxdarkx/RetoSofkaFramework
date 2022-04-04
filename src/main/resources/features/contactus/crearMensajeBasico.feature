@@ -2,7 +2,7 @@
 # @Regression
   @FeatureName:crearMensajeBasico
   Característica: crear un mensaje para soporte tecnico
-  como cliente del sitio
+  Yo como cliente del sitio
   necesito enviar un mensaje a soporte tecnico
   para poner una queja
 

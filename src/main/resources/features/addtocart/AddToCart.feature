@@ -1,7 +1,7 @@
 # language: es
   @FeatureName:AddToCart
   Característica: Añadir al carrito de compras
-    como cliente registrado de la pagina
+    Yo como cliente registrado de la pagina
     necesito añadir al carrito de compras
     para comprar productos de la pagina
   @ScenarioName:AñadirAlCarritoDesdeLaPaginaPrincipal
